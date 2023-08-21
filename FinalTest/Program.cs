@@ -19,6 +19,8 @@ void PrintArray(string[] arr)
     Console.WriteLine();
 }
 
+Console.WriteLine("Enter array size: ");
+int size = Convert.ToInt32(Console.ReadLine());
 string[] mass = new string[7];
 
 mass = EnterMassive(mass);
@@ -54,6 +56,7 @@ void NewMassive(string[] array, int numberOfShortStrings)
             NewMass[lengthCount] = array[i];
             lengthCount++;
         }
+        if(lengthCount > numberOfShortStrings) break;
     }
 Console.WriteLine("New massive");
 PrintArray(NewMass);
